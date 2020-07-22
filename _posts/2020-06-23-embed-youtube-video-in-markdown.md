@@ -2,7 +2,7 @@
 layout: post
 title:  "How to Embed YouTube Videos in Markdown"
 date:   2020-06-23 12:00:00 +0700
-categories: custommayd "developer training" videos markdown
+categories: custommayd developer training videos markdown
 ---
 I can never remember the best way to embed a video in Markdown, so here, for posterity is the information.
 
