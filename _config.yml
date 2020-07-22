@@ -1,1 +1,27 @@
-theme: jekyll-theme-cayman
+
+# Site settings
+title: CustomMayd - Thoughts on coding and developer training
+description: I am a 7 times Windows Developer MVP and the owner of CustomMayd - a developer training and custom development consultancy.
+author: Daren May
+#email: your-email@example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+url: https://darenm.github.io
+twitter_username: darenmay
+github_username:  darenm
+stackoverflow_username: "158833"
+twitter:
+  username: darenmay
+  card: summary
+
+# Build settings
+markdown: GFM
+theme: minima
+show_excerpts: true
+google_analytics: UA-101356239-2
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+gist:
+  noscript: false
+future: true 
+jailed: false
