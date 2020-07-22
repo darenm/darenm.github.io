@@ -4,11 +4,9 @@ title:  "CustomMayd Training Videos"
 date:   2020-06-23 12:00:00 +0700
 categories: custommayd "developer training" videos 
 ---
-# CustomMayd Training Videos
-
 I have consolidated many of the training videos I have either created or participated in over the years on the [CustomMayd YouTube Channel](https://www.youtube.com/channel/UC-Pl7BhRPcInqv-V1_O3bSA/playlists).
 
-![CustomMayd YouTube Channel](images/2020-06-23-youtube-channel.png)
+![CustomMayd YouTube Channel]({{ site.url }}/assets/2020-06-23-youtube-channel.png)
 
 They have been grouped into various playlists:
 

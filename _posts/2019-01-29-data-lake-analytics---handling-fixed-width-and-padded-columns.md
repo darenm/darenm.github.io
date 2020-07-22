@@ -4,8 +4,6 @@ title:  "Data Lake Analytics - Handling Fixed Width and Padded Columns"
 date:   2019-01-29 12:00:00 +0700
 categories: datalakeanalytics datalake analytics usql
 ---
-# Data Lake Analytics - Handling Fixed Width and Padded Columns
-
 I had the need to process some data from NOAA in Data Lake Analytics. The data is related to historical weather and I discovered that the data format is old-school - fixed field width and no delimiter style. As I have now realized, the built-in data extractors are limited to the following:
 
 * CSV - comma separated values

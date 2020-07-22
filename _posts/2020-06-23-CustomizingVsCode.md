@@ -4,8 +4,6 @@ title:  "Customizing the Visual Studio Code Integrated Terminal"
 date:   2020-06-23 12:00:00 +0700
 categories: vscode "visual studio code" 
 ---
-# Customizing the Visual Studio Code Integrated Terminal
-
 I continually forget how to customize the integrated terminal in VSCode, so I will capture it here for posterity.
 
 ## Configure default PowerShell version

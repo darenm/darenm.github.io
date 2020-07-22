@@ -4,8 +4,6 @@ title:  "Exploring IoT on Raspberry PI 3 V2 with .NET/C#"
 date:   2019-10-15 12:00:00 +0700
 categories: iot .netcore c# raspberrypi
 ---
-# Exploring IoT on Raspberry PI 3 V2 with .NET/C#
-
 While working on various courses for Azure IoT, I have had a bunch of experience working with C/C++ and Python on Linux and C#/UWP on Windows 10 IoT Core. However I have noticed that the Raspberry Pi isn't necessarily an ideal platform for Windows 10 Core - in fact the later models, including the Raspberry Pi 4, are not yet supported. So, if I want to explore IoT in C# on the Raspberry Pi, I need to look at .NET Core.
 
 ## Install .NET Core 3.0

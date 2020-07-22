@@ -4,13 +4,11 @@ title:  "Azure IoT, Streaming Analytics, Data Lake Analytics and JSON"
 date:   2019-01-27 12:00:00 +0700
 categories: office365
 ---
-# Azure IoT, Streaming Analytics, Data Lake Analytics and JSON
-
 ## Overview
 
 As part of the work developing and designing content for the Azure IoT MPP I explored how to connect device telemetry from an IoT Hub to Data Lake Analytics for some big-data analysis. It turns out that it is not quite as straightforward as I had imagined. I was unable to directly connect the IoT Hub to Data Lake Storage Gen 1 so I had to add Azure Streaming Analytics to the solution:
 
-![Device-IoTHub-ASA-DLS-DLA12_thumb1](images/Device-IoTHub-ASA-DLS-DLA12_thumb1_636841673650664874.png)
+![Device-IoTHub-ASA-DLS-DLA12_thumb1]({{ site.url }}/assets/Device-IoTHub-ASA-DLS-DLA12_thumb1_636841673650664874.png)
 
 Key issues I encountered include:
 

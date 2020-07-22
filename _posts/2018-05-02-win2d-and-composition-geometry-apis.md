@@ -4,8 +4,6 @@ title:  "Win2D and Composition Geometry APIs"
 date:   2018-05-02 12:00:00 +0700
 categories: win2d uwp composition
 ---
-# Win2D and Composition Geometry APIs
-
 The Windows 10 April 2018 Update includes a new set of APIs in the Composition namespace that support various geometries such as lines, ellipses, rectangles and paths. However, during the insider cycle, it wasn’t possible to create arbitrary paths as there was a reliance on an implementation of IGeometrySource2D that could not be found. Fast forward until today when a [new version of the Win2D package has been released – V1.22.0](https://blogs.msdn.microsoft.com/win2d/2018/05/02/win2d-1-22-0-igeometrysource2d-bugfixes-and-removal-of-8-1-support/) and now we can make use of CanvasGeometry class to create our paths.
 
 Here is quick walk-through on getting started with the Geometry APIs.
@@ -94,7 +92,7 @@ private static void SetupPathAndAnimation(Compositor c, CompositionContainerShap
 
 1. Compile and run this - you will see the following. I believe this code is pretty self-explanatory.
 
-    ![image](images/image_636608892241803570.png)
+    ![image]({{ site.url }}/assets/image_636608892241803570.png)
 
 1. Now we will add a path and animate it. Add the following classes and enum to the project (these are just some helpers I created):
 
@@ -231,6 +229,6 @@ private static void SetupPathAndAnimation(Compositor c, CompositionContainerShap
 
 1. Compile and run the code - you will notice that two paths are now being rendered and the W is animating.
 
-    ![image](images/image_636608892246293316.png)
+    ![image]({{ site.url }}/assets/image_636608892246293316.png)
 
 This is obviously a very simple example of using the new Composition Geometery APIs, but should be enough to get you started.

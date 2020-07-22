@@ -4,15 +4,13 @@ title:  ".NET Core and GPIO on the Raspberry PI - LEDs and GPIO"
 date:   2019-10-16 12:00:00 +0700
 categories: iot .netcore c# raspberrypi
 ---
-# .NET Core and GPIO on the Raspberry PI - LEDs and GPIO
-
 In the previous article, I explored installing and running .NET Core 3.0 on a Raspberry PI running Raspbian. In this article I intend to create a simple console application that will interact with the GPIO and flash an LED.
 
 ## What is a GPIO?
 
 GPIO stands for General Purpose Input Output. A GPIO pin has no predefined purpose - i.e. they are unused by the main device and can be configured as input or output and can be controlled by an application. The Raspberry Pi has two rows of GPIO pins, as well as others.
 
-![PI GPIO](images/PiGPIO_637068541768653013.png)
+![PI GPIO]({{ site.url }}/assets/PiGPIO_637068541768653013.png)
 
 Output pins are like switches that your app running on the Raspberry Pi can turn on or off - common uses include turning on LEDs, but they can be used for more advanced communication with devices.
 
@@ -217,7 +215,7 @@ We'll now update our application to interact with the GPIO bus and flash an LED.
     * Connect GPIO 17 (physical pin 11) to the negative lead of the LED
     * Use the 220 Ohm resistor to connect the positive rail to the positive lead of the LED.
 
-    ![SimpleFlasher_bb](images/SimpleFlasher_bb_637068541796302725.png)
+    ![SimpleFlasher_bb]({{ site.url }}/assets/SimpleFlasher_bb_637068541796302725.png)
 
 4. To test the app, enter the following command:
 
@@ -250,19 +248,19 @@ We'll now update our application to interact with the GPIO bus and flash an LED.
 
 Next we will extend the sample above by adding more LEDs which we will use to display binary numbers. You can either connect individual LEDs, or an LED Bar Graph component (one is included in the kit I linked to above):
 
-![LedBraGraph](images/LedBraGraph_637068541809870760.jpg)
+![LedBraGraph]({{ site.url }}/assets/LedBraGraph_637068541809870760.jpg)
 
 > **Note:** It is hard to determine which way round to fit these, you may have to rotate it if none of the LEDs come on...
 
 1. Update the breadboard wiring as follows:
 
-    ![LedBinary_bb](images/LedBinary_bb_637068541827918595.png)
+    ![LedBinary_bb]({{ site.url }}/assets/LedBinary_bb_637068541827918595.png)
 
     Note that the resistors supply power to one side of the LEDs, and pulling a pin low causes current to flow, illuminating the LEDs.
 
     Also, I have chosen pins based upon wiring convenience, rather than following an form of numbering convention - to be honest, the pin layout of the GPIO bus on the PI only makes sense based upon the convenience of the manufacturer.
 
-    ![PI GPIO](images/PiGPIO_637068541768653013.png)
+    ![PI GPIO]({{ site.url }}/assets/PiGPIO_637068541768653013.png)
 
     Anyway, the pins I used are:
 
@@ -426,7 +424,7 @@ Now we are going to add a switch to the circuit and check to see if the switch i
 
 1. Let's update the circuit to include a switch connected between 3.3v and GPIO 17.
 
-    ![LED Binary Reset](images/LedBinaryReset_bb_637068541883901124.png)
+    ![LED Binary Reset]({{ site.url }}/assets/LedBinaryReset_bb_637068541883901124.png)
 
 1. Compile and run the code with the following command:
 
