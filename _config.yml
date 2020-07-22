@@ -15,7 +15,7 @@ twitter:
 
 # Build settings
 markdown: GFM
-theme: jekyll-theme-cayman
+theme: minima
 show_excerpts: true
 google_analytics: UA-101356239-2
 plugins:
