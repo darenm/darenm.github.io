@@ -32,17 +32,17 @@ In this task you will create a simple Single Page App with the Uno Platform. Thi
 
 1. Open Visual Studio and click on **Create a new project**.
 
-    ![Visual Studio new project dialog](../Assets/how-to-webservice/newproject1.PNG)
+    ![Visual Studio new project dialog]({{ site.url }}/assets/how-to-webservice/newproject1.PNG)
 
 1. In the **Search for Templates** search box, enter **Uno**
 
-    ![Visual Studio new project dialog searching for Uno](../Assets/how-to-webservice/newproject2.PNG)
+    ![Visual Studio new project dialog searching for Uno]({{ site.url }}/assets/how-to-webservice/newproject2.PNG)
 
 1. In the filtered list of templates, select **Cross-Platform App (Uno Platform)** and then click **Next**.
 
 1. In the **Configure your new project** window, set the **Project name** to **TheCatApiClient**, choose where you would like to save your project and click the **Create** button.
 
-    ![Configure your new project dialog](../Assets/how-to-webservice/newproject3.PNG)
+    ![Configure your new project dialog]({{ site.url }}/assets/how-to-webservice/newproject3.PNG)
 
     > **IMPORTANT**:
     > The C# and XAML snippets in this tutorial requires that the solution is named **TheCatApiClient**. Using a different name will result in build errors when you copy code from this tutorial into the solution.
@@ -80,7 +80,7 @@ In this task you will create a simple Single Page App with the Uno Platform. Thi
 
 1. In the right pane of the **Manage Packages for Solution** page, select every project and click **Install**.
 
-    ![Install System.Text.Json nuget package](../Assets/how-to-webservice/json-install.png)
+    ![Install System.Text.Json nuget package]({{ site.url }}/assets/how-to-webservice/json-install.png)
 
 
 1. To workaround a Visual studio issue regarding the XAML editor, you'll need to close any opened file in the editor, then close the solution or Visual Studio, then re-open it.
@@ -89,11 +89,11 @@ In this task you will create a simple Single Page App with the Uno Platform. Thi
 
 1. To launch the application, under the **Debug** menu, click **Start Debugging** or use the shortcut key, commonly **F5**.
 
-    ![The Cat API Client app running cross-platform](../Assets/how-to-webservice/TheCatApiClient-UWP.png)
+    ![The Cat API Client app running cross-platform]({{ site.url }}/assets/how-to-webservice/TheCatApiClient-UWP.png)
 
     The following image shows the sample app running on the Android Simulator, IPhone Simulator and as a WASM app in the browser.
 
-    ![The Cat API Client app running cross-platform](../Assets/how-to-webservice/crosplat-start.png)
+    ![The Cat API Client app running cross-platform]({{ site.url }}/assets/how-to-webservice/crosplat-start.png)
 
 You have now created a sample application that will be extended in later tasks.
 
@@ -194,7 +194,7 @@ The primary objective of this tutorial is to demonstrate how to implement a REST
 
     After creating the folders, the project should look similar to:
 
-    ![Shared project model folders](../Assets/how-to-webservice/model-folders.png)
+    ![Shared project model folders]({{ site.url }}/assets/how-to-webservice/model-folders.png)
 
 1. Examine the JSON returned from the breed search you executed earlier:
 
@@ -894,7 +894,7 @@ You have now built the view-model for the Main Page. Next, it is time to build t
 
 In this task you will create the XAML for the UI and implement the bindings for the **MainViewModel**. When the UWP version of the app is running, the UI will look similar to this:
 
-![UWP Search UI preview](../Assets/how-to-webservice/uwp-ui-preview.png)
+![UWP Search UI preview]({{ site.url }}/assets/how-to-webservice/uwp-ui-preview.png)
 
 1. In the **Solution Explorer**, in the **TheCatApiClient.Shared** project, open the **MainPage.xaml** file.
 
@@ -1021,7 +1021,7 @@ In this task you will create the XAML for the UI and implement the bindings for 
 
     Notice that this grid is displayed from row 1 and spans 4 rows. As this grid is defined last, it will appear on top of the other controls, block click/touch interactions with the underlying controls as well showing a semi-opaque message that the app is **Downloading data**.
 
-    ![UWP Search UI preview](../Assets/how-to-webservice/uwp-ui-busy.png)
+    ![UWP Search UI preview]({{ site.url }}/assets/how-to-webservice/uwp-ui-busy.png)
 
     > **NOTE**:
     > You would typically use a **ProgressRing** here, but in a effort to keep the UI as simple as possible, this approach was taken.
@@ -1113,7 +1113,7 @@ In this task you will create the XAML for the UI and implement the bindings for 
 
     The **Downloading data...** UI should be shown and then the results should be populated. You should be able to scroll the results and select one (nothing will happen yet).
 
-    ![UWP Search UI preview](../Assets/how-to-webservice/uwp-ui-preview.png)
+    ![UWP Search UI preview]({{ site.url }}/assets/how-to-webservice/uwp-ui-preview.png)
 
 1. When you have finished testing the UWP app, close it.
 
@@ -1127,13 +1127,13 @@ In this task you will create the XAML for the UI and implement the bindings for 
 
     The **Downloading data...** UI should be shown and then the results should be populated. You should be able to scroll the results and select one (nothing will happen yet).
 
-    ![WebAssembly Search UI preview](../Assets/how-to-webservice/wasm-ui-preview.png)
+    ![WebAssembly Search UI preview]({{ site.url }}/assets/how-to-webservice/wasm-ui-preview.png)
 
     This validates that your code to use **Uno.UI.Wasm.WasmHttpHandler** for Wasm, rather than **HttpClientHandler** is working.
 
     Here is how the app looks running in the iPhone and Android simulators:
 
-    ![Application running on iPhone and Android simulators](../Assets/how-to-webservice/app-running-simulators.png)
+    ![Application running on iPhone and Android simulators]({{ site.url }}/assets/how-to-webservice/app-running-simulators.png)
 
 Congratulations - you now have a cross-platform application that interacts with a web service using an HTTP GET operation. If you are interested in seeing how to implement additional operations, continue with the next tasks.
 
@@ -1795,11 +1795,11 @@ In this final task you will bring together the new **FavoritesApi** with the upd
 
     The **Downloading data...** UI should be shown and then the results should be populated. You should be able to scroll the results and select one (nothing will happen yet).
 
-    ![UWP Search UI preview](../Assets/how-to-webservice/uwp-ui-preview.png)
+    ![UWP Search UI preview]({{ site.url }}/assets/how-to-webservice/uwp-ui-preview.png)
 
 1. In the search results, click **Abyssinian** and you should see an image of a cat added to the **Favorites** list.
 
-    ![UWP Search UI preview](../Assets/how-to-webservice/client-with-favorite.png)
+    ![UWP Search UI preview]({{ site.url }}/assets/how-to-webservice/client-with-favorite.png)
 
 1. Repeat the above, adding images for other breeds.
 
@@ -1817,7 +1817,7 @@ In this final task you will bring together the new **FavoritesApi** with the upd
 
 1. Try the app on the other platforms. Below is an image of app running on the iPhone and Android simulators.
 
-    ![app running on iphone and android simulators](../Assets/how-to-webservice/favorites-on-phone.png)
+    ![app running on iphone and android simulators]({{ site.url }}/assets/how-to-webservice/favorites-on-phone.png)
 
 ## Summary
 
