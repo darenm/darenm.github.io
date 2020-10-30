@@ -1,5 +1,3 @@
-# How to consume a webservice with Uno
-
 This how-to will walk you through the process of creating a multi-platform application that leverages web services. Specifically you will be:
 
 * Creating a simple Uno application.
