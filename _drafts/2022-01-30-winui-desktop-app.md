@@ -9,9 +9,12 @@ I've been meaning to put together a tutorial for WinUI and some native interop a
 
 ## Designing the App
 
-I want to use this app as the foundation for an exploration of WinUI3 and Windows App SDK on the desktop. I've spent a number of years working with the earlier iterations of the desktop frameworks: UWP, Universal Windows Apps on Windows 8.x, Silverlight and WPF
+I want to use this app as the foundation for an exploration of WinUI3 and Windows App SDK on the desktop. I've spent a number of years working with the earlier iterations of the desktop frameworks: UWP, Universal Windows Apps on Windows 8.x, Silverlight and WPF, so this is an opportunity to see the differences.
 
 ![Desktop layout with 3 monitors]({{ site.url }}/assets/2022-01-30 14_31_50-DeskDropper.png)
+
+
+![Desktop layout with 1 monitor]({{ site.url }}/assets/2022-01-30 15_56_37-DeskDropper.png)
 
 
 https://docs.microsoft.com/en-us/windows/win32/api/shobjidl_core/nn-shobjidl_core-idesktopwallpaper
