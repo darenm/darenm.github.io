@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "WinUI Desktop App with native interop"
+title:  "Windows App SDK Desktop App with native interop - Part 2"
 date:   2022-01-30 12:00:00 +0700
 categories: custommayd winui desktop xaml native interop
 ---
