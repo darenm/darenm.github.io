@@ -105,7 +105,7 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
 11. Open **heman.def** and add the following:
 
-    ```def
+    ```text
     LIBRARY
 
     EXPORTS
@@ -190,7 +190,7 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
 14. Rebuild **heman**, open the Command Palette [**Ctrl+Shift+P**] and run the **CMake: Build** command.
 
-15. Use the [DLL Export Viewer tool](https://www.nirsoft.net/utils/dll_export_viewer.html)and open the **heman.dll**. This time you will see all of the exported functions:
+15. Use the [DLL Export Viewer tool](https://www.nirsoft.net/utils/dll_export_viewer.html) and open the **heman.dll**. This time you will see all of the exported functions:
 
     ![heman.dll with with exports]({{ site.url }}/assets/heman-with-exports.png)
 
@@ -256,19 +256,19 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
 19. Return once again to the **CMakeLists.txt** file and locate the following line:
 
-    ```def
+    ```text
     add_library(heman SHARED ${HEMAN_SOURCE} ${MATH_SOURCE} heman.def)
     ```
 
     Update it to include the new **hut.c** file as follows:
 
-    ```def
+    ```text
     add_library(heman SHARED ${HEMAN_SOURCE} ${MATH_SOURCE} test/hut.c heman.def)
     ```
 
 20. Open the **heman.def** file and the following to the bottom of the list
 
-    ```def
+    ```text
     hut_read_image
     hut_write_image
     hut_write_image_scaled
@@ -383,10 +383,9 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
     ![Displaying the thread count from the heman api]({{ site.url }}/assets/WinUIDesktop.png)
 
-    **Important**: If a **BadImmageFormatException** is raised, ensure your WinApp target and the target you build the **heman.dll** match - i.e.:
-
-    * WinApp target - x64
-    * heman.dll target - amd64
+    > **Important**: If a **BadImmageFormatException** is raised, ensure your WinApp target and the target you build the **heman.dll** match - i.e.:
+    > * WinApp target - x64
+    > * heman.dll target - amd64
 
 ## Wrap up
 

@@ -1,7 +1,7 @@
 
 # Site settings
 title: CustomMayd - Thoughts on coding and developer training
-description: I am a 7 times Windows Developer MVP and the owner of CustomMayd - a developer training and custom development consultancy.
+description: I am a 8 times Windows Developer MVP and the owner of CustomMayd - a developer training and custom development consultancy.
 author: Daren May
 #email: your-email@example.com
 baseurl: "" # the subpath of your site, e.g. /blog
@@ -23,5 +23,5 @@ plugins:
   - jekyll-seo-tag
 gist:
   noscript: false
-future: true 
+future: true
 jailed: false
