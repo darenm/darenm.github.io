@@ -6,7 +6,7 @@ categories: custommayd winui desktop xaml native interop
 ---
 As the Windows App SDK moves beyond release 1.0 and begins to expand it's capability, I thought it was time to start exploring it more fully. In this post I will explore the integration of a native API into a Windows App SDK. You can learn more about Windows App SDK here: [Windows App SDK](<https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/>)
 
-The source code for the WinApp can be found here: [HemanWinUI](https://github.com/darenm/HemanWinU).
+The source code for the WinApp can be found here: [HemanWinUI](https://github.com/darenm/HemanWinUI).
 
 ## Choosing a Native API
 
@@ -393,4 +393,4 @@ In this tutorial I showed how a C API using the CMake utility can be built on Wi
 
 In the next part of this tutorial I will increase the complexity and deal with generating some height maps and displaying them within the WinApp.
 
-The source code for the WinApp can be found here: [HemanWinUI](https://github.com/darenm/HemanWinU).
+The source code for the WinApp can be found here: [HemanWinUI](https://github.com/darenm/HemanWinUI).
