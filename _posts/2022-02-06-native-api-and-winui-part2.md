@@ -558,7 +558,7 @@ At this point, you have an example that would save a PNG to your `%TEMP%` folder
 
         <!--Grid for shadow projection -->
 
-        <!--Grid for shadow projection -->
+        <!-- Button to launch image render -->
 
         <!-- Image to display rendered image -->
         </Image>
