@@ -4,9 +4,9 @@ title:  "Windows App SDK Desktop App with native interop - Part 1"
 date:   2022-02-05 12:00:00 +0700
 categories: custommayd winui desktop xaml native interop
 ---
-As the Windows App SDK moves beyond release 1.0 and begins to expand it's capability, I thought it was time to start exploring it more fully. In this post I will explore the integration of a native API into a Windows App SDK. You can learn more about Windows App SDK here: [Windows App SDK](<https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/>)
+As the Windows App SDK moves beyond release 1.0 and begins to expand it's capability, I thought it was time to start exploring it more fully. In this post I will explore the integration of a native API into a Windows App SDK. You can learn more about Windows App SDK here: [Windows App SDK](<https://docs.microsoft.com/windows/apps/windows-app-sdk/>)
 
-The source code for the WinApp can be found here: [HemanWinUI.](https://github.com/darenm/HemanWinUI)
+The source code for the WinApp can be found here: [HemanWinUI.](https://github.com/darenm/HemanWinUI/tree/part1)
 
 ## Choosing a Native API
 
@@ -42,7 +42,7 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
     code .
     ```
 
-1. When VSCode launched, I was invited to select a kit for to use for the API. I chose Visual Studio 2022 Enterprise Release amd64. This configured the CMake tool.
+3. When VSCode launched, I was invited to select a kit for to use for the API. I chose Visual Studio 2022 Enterprise Release amd64. This configured the CMake tool.
 
     > **Important**: This will compile the output to target x64 - remember this and configure the WinApp to x64 later on to match.
 
@@ -73,9 +73,9 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
     ![heman.dll with no exports]({{ site.url }}/assets/heman-no-exports.png)
 
-8. There are a number of ways that functions can be exported via a DLL - Microsoft documentation discussing approaches can be found here: [Exporting from a DLL](https://docs.microsoft.com/en-us/cpp/build/exporting-from-a-dll?view=msvc-170).
+8. There are a number of ways that functions can be exported via a DLL - Microsoft documentation discussing approaches can be found here: [Exporting from a DLL](https://docs.microsoft.com/cpp/build/exporting-from-a-dll?view=msvc-170).
 
-    If writing code from scratch, or if you wish to update existing source, function definitions in a header file are prefixed with `__declspec(dllexport)` - see [Exporting from a DLL Using __declspec(dllexport)](https://docs.microsoft.com/en-us/cpp/build/exporting-from-a-dll-using-declspec-dllexport?view=msvc-170) for more details. For example:
+    If writing code from scratch, or if you wish to update existing source, function definitions in a header file are prefixed with `__declspec(dllexport)` - see [Exporting from a DLL Using __declspec(dllexport)](https://docs.microsoft.com/cpp/build/exporting-from-a-dll-using-declspec-dllexport?view=msvc-170) for more details. For example:
 
     ```c
     int Sum(int a, int b);
@@ -87,9 +87,9 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
     __declspec(dllexport) int Sum(int a, int b);
     ```
 
-    Another approach, that I shall use here, is to create a module definition file that lists the desired exports - see [Exporting from a DLL Using DEF Files](https://docs.microsoft.com/en-us/cpp/build/exporting-from-a-dll-using-def-files?view=msvc-170) for more information.
+    Another approach, that I shall use here, is to create a module definition file that lists the desired exports - see [Exporting from a DLL Using DEF Files](https://docs.microsoft.com/cpp/build/exporting-from-a-dll-using-def-files?view=msvc-170) for more information.
 
-9.  To export functions, we need to know the names of each function. Open **include/heman.h** and you will see the API function definitions. For example:
+9. To export functions, we need to know the names of each function. Open **include/heman.h** and you will see the API function definitions. For example:
 
     ```c
     // Peek at the stored texel values in a SWIG-amenable way.
@@ -266,7 +266,7 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
     add_library(heman SHARED ${HEMAN_SOURCE} ${MATH_SOURCE} test/hut.c heman.def)
     ```
 
-20. Open the **heman.def** file and the following to the bottom of the list
+20. Open the **heman.def** file and add the following to the bottom of the list
 
     ```text
     hut_read_image
@@ -276,13 +276,13 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
 21. Rebuild **heman**, open the Command Palette [**Ctrl+Shift+P**] and run the **CMake: Build** command.
 
-22. Use the [DLL Export Viewer tool](https://www.nirsoft.net/utils/dll_export_viewer.html)and open the **heman.dll**. You should be able to find the hut functions added to the list.
+22. Use the [DLL Export Viewer tool](https://www.nirsoft.net/utils/dll_export_viewer.html) and open the **heman.dll**. You should be able to find the hut functions added to the list.
 
 23. We are now ready to consume this DLL in a WinApp.
 
 ## Create a WinApp project
 
-1. Ensure you have installed and configures Visual Studio 2022 as documented here: [Install tools for developing apps for Windows 10 and Windows 11](https://docs.microsoft.com/en-us/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=vs-2022).
+1. Ensure you have installed and configures Visual Studio 2022 as documented here: [Install tools for developing apps for Windows 10 and Windows 11](https://docs.microsoft.com/windows/apps/windows-app-sdk/set-up-your-development-environment?tabs=vs-2022).
 
 1. In Visual Studio, create a **Blank App, Packaged (WinUI 3 in Desktop)** C# app - name is **HemanWinUI**.
 
@@ -336,7 +336,7 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
     This code follows the recommended practice of using an nested private static class named **NativeMethods** to encapsulate the `DLLImport` attributed external function definitions. The **HemanApi** class then exposes a more C# friendly method for consuming the native method. As the implementation grows, these methods will increase in complexity.
 
-    > **Note**: To learn more about native interoperability, P/invoke, and best practices, refer to the documentation here: [Native interoperability](https://docs.microsoft.com/en-us/dotnet/standard/native-interop/)
+    > **Note**: To learn more about native interoperability, P/invoke, and best practices, refer to the documentation here: [Native interoperability](https://docs.microsoft.com/dotnet/standard/native-interop/)
 
 8. To implement a simple UI to interact with this native API, open **MainWindow.xaml** and replace the exiting `<StackPanel>` with the following:
 
@@ -383,7 +383,8 @@ A guide for getting started with CMake in Visual Studio Code is available [here]
 
     ![Displaying the thread count from the heman api]({{ site.url }}/assets/WinUIDesktop.png)
 
-    > **Important**: If a **BadImmageFormatException** is raised, ensure your WinApp target and the target you build the **heman.dll** match - i.e.:
+    > **Important**: If a **BadImageFormatException** is raised, ensure your WinApp target and the target you build the **heman.dll** match - i.e.:
+    >
     > * WinApp target - x64
     > * heman.dll target - amd64
 
@@ -393,4 +394,4 @@ In this tutorial I showed how a C API using the CMake utility can be built on Wi
 
 In the next part of this tutorial I will increase the complexity and deal with generating some height maps and displaying them within the WinApp.
 
-The source code for the WinApp can be found here: [HemanWinUI.](https://github.com/darenm/HemanWinUI)
+The source code for the WinApp can be found here: [HemanWinUI.](https://github.com/darenm/HemanWinUI/tree/part1)
