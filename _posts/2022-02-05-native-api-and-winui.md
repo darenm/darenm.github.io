@@ -8,6 +8,8 @@ As the Windows App SDK moves beyond release 1.0 and begins to expand it's capabi
 
 The source code for the WinApp can be found here: [HemanWinUI.](https://github.com/darenm/HemanWinUI/tree/part1)
 
+[Part 2](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui-part2.html) of this tutorial can be found [here](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui-part2.html).
+
 ## Choosing a Native API
 
 As I want to explore the entire process of building a native API from source through to including it in a Windows App SDK desktop application (I'll call it a WinApp from now on), I wanted to choose a simple standalone API. I settled on the [heman](https://github.com/prideout/heman) library:
@@ -395,3 +397,5 @@ In this tutorial I showed how a C API using the CMake utility can be built on Wi
 In the next part of this tutorial I will increase the complexity and deal with generating some height maps and displaying them within the WinApp.
 
 The source code for the WinApp can be found here: [HemanWinUI.](https://github.com/darenm/HemanWinUI/tree/part1)
+
+[Part 2](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui-part2.html) of this tutorial can be found [here](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui-part2.html).

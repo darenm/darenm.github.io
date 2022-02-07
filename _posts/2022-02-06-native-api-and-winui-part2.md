@@ -8,7 +8,7 @@ As the Windows App SDK moves beyond release 1.0 and begins to expand it's capabi
 
 In this second part, I will extend the implementation of the native API and add a UI.
 
-Part 1 can be found [here](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui.html).
+[Part 1](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui.html) can be found [here](https://www.darenmay.com/custommayd/winui/desktop/xaml/native/interop/2022/02/05/native-api-and-winui.html).
 
 The source code for the WinApp can be found here: [HemanWinUI Part 2.](https://github.com/darenm/HemanWinUI/tree/part2)
 
